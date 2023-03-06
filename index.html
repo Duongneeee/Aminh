@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="input" id="input1" type="text" style="background-color: rgb(255, 255, 0) ;" >
+    <input class="input" id="input2" type="text" style="background-color: rgb(255, 0, 0) ;" >
+    <button id="submit">random</button>
+</body>
+
+<style>
+    body{  
+        
+        background-image:linear-gradient(to right, rgb(255, 255, 0), rgb(255, 0, 0));
+    }
+
+    .input {
+        border: 5px solid #fff;
+        
+    }
+
+</style>
+
+<script>
+    const input1 = document.querySelector("#input1");
+    const input2 = document.querySelector("#input2");
+    const submit = document.querySelector("#submit");
+    submit.addEventListener("click",()=>{
+        var randomColor = Math.floor(Math.random()*16777215).toString(16);
+        input1.style.backgroundColor = "#" + randomColor;
+        var randomColor = Math.floor(Math.random()*16777215).toString(16);
+        input2.style.backgroundColor = "#" + randomColor;
+    })
+</script>
+</html>
